@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@vercel/remix";
+import type { MetaFunction } from "@remix-run/node";
 import SectionAbout from "~/components/section-about";
 import SectionHero from "~/components/section-hero";
 import SectionLocations from "~/components/section-locations";

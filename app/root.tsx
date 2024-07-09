@@ -8,7 +8,7 @@ import {
 	useRouteError,
 } from "@remix-run/react";
 
-import type { LinkDescriptor, LinksFunction } from "@remix-run/node";
+import type { LinkDescriptor, LinksFunction } from "@vercel/remix";
 
 import styleSheetTailwind from "~/styles/tailwind.css?url";
 import styleSheetFonts from "~/styles/fonts.css?url";

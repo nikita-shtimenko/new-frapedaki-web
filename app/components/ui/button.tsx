@@ -1,8 +1,10 @@
-import * as Headless from "@headlessui/react";
+import {
+	Button as HeadlessButton,
+	type ButtonProps as HeadlessButtonProps,
+} from "@headlessui/react";
 import clsx from "clsx";
-import type React from "react";
-import { forwardRef } from "react";
 import { Link } from "./link";
+import { forwardRef } from "react";
 
 const styles = {
 	base: [
@@ -57,10 +59,6 @@ const styles = {
 		// Icon
 		"[--btn-icon:theme(colors.zinc.500)] data-[active]:[--btn-icon:theme(colors.zinc.700)] data-[hover]:[--btn-icon:theme(colors.zinc.700)] dark:[--btn-icon:theme(colors.zinc.500)] dark:data-[active]:[--btn-icon:theme(colors.zinc.400)] dark:data-[hover]:[--btn-icon:theme(colors.zinc.400)]",
 	],
-	// rectangle: [
-	// 	// Base
-	// 	"border-blue-600/50 text-zinc-950 data-[hover]:transition-colors data-[hover]:duration-200 data-[hover]:bg-blue-600 data-[hover]:text-zinc-100",
-	// ],
 	colors: {
 		"dark/zinc": [
 			"text-white [--btn-bg:theme(colors.zinc.900)] [--btn-border:theme(colors.zinc.950/90%)] [--btn-hover-overlay:theme(colors.white/10%)]",
@@ -168,7 +166,7 @@ type ButtonProps = (
 	| { color?: never; outline: true; plain?: never }
 	| { color?: never; outline?: never; plain: true }
 ) & { className?: string; children: React.ReactNode } & (
-		| Omit<Headless.ButtonProps, "className">
+		| Omit<HeadlessButtonProps, "className">
 		| Omit<React.ComponentPropsWithoutRef<typeof Link>, "className">
 	);
 
@@ -195,13 +193,13 @@ export const Button = forwardRef(function Button(
 			<TouchTarget>{children}</TouchTarget>
 		</Link>
 	) : (
-		<Headless.Button
+		<HeadlessButton
 			{...props}
 			className={clsx(classes, "cursor-default")}
 			ref={ref}
 		>
 			<TouchTarget>{children}</TouchTarget>
-		</Headless.Button>
+		</HeadlessButton>
 	);
 });
 

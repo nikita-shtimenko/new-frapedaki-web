@@ -57,7 +57,7 @@ export default function Header() {
 						</NavLink>
 					))}
 				</div>
-				<div className="hidden lg:flex lg:flex-1 lg:gap-x-4 lg:justify-end lg:text-sm lg:font-bold lg:font-mono">
+				<div className="hidden lg:flex lg:flex-1 lg:gap-x-2 lg:justify-end lg:text-sm lg:font-bold lg:font-mono">
 					<Link
 						href="#"
 						className="border px-4 py-2 border-blue-600/75 hover:transition-colors hover:duration-200 hover:bg-blue-600 hover:text-zinc-100"

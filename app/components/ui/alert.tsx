@@ -3,15 +3,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "~/utils/tailwind";
 
 const alertVariants = cva(
-	"relative w-full rounded-none border p-4 [&>svg~*]:pr-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:right-4 [&>svg]:top-4 [&>svg]:text-zinc-100",
+	"relative w-full border p-4 [&>svg~*]:pr-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:right-4 [&>svg]:top-4 [&>svg]:text-zinc-100",
 	{
 		variants: {
 			variant: {
 				default: "bg-blue-600 text-zinc-100",
 			},
+			rounded: {
+				default: "rounded-lg",
+				none: "rounded-none",
+			},
 		},
 		defaultVariants: {
 			variant: "default",
+			rounded: "default",
 		},
 	},
 );

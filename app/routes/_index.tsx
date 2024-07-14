@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import Header from "~/components/header";
 import SectionAbout from "~/components/section-about";
 import SectionHero from "~/components/section-hero";
 import SectionLocations from "~/components/section-locations";
@@ -13,10 +14,11 @@ export const meta: MetaFunction = () => {
 
 export default function PageIndex() {
 	return (
-		<Container>
-			<SectionHero />
-			<SectionAbout />
-			<SectionLocations />
-		</Container>
+		<>
+			<Header />
+			<Container>
+				<SectionHero />
+			</Container>
+		</>
 	);
 }
